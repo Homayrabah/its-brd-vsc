@@ -74,7 +74,7 @@ project:
             - --info summarysizes
 
   linker:
-    - script: A1ASM_ITSboard.sct
+    - script: A1_ITSboard.sct
 
   groups:
     # Dokumentationsgruppe

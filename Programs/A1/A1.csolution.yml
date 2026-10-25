@@ -27,4 +27,4 @@ solution:
 
   # List related projects.
   projects:
-    - project: A1ASM.cproject.yml
+    - project: A1.cproject.yml

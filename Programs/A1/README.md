@@ -79,4 +79,4 @@ Deshalb konnten die Registerinhalte und die LED-Zustände noch nicht mit dem Deb
 
 Die Optimierung wurde umgesetzt und das Programm erfolgreich kompiliert. Die Anzahl der `STRB`-Anweisungen wurde von acht auf zwei reduziert.
 
-Die praktische Überprüfung mit Breakpoints und Registeranzeige steht noch aus und soll im Praktikum durchgeführt werden.
+Die praktische Überprüfung mit Breakpoints und Registeranzeige steht noch aus und soll im Praktikum durchgeführt werden.git remote -v
