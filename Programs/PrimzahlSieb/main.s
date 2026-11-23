@@ -14,16 +14,31 @@
 // 2. Feld initialisieren
 // - sieb[0] = 0 und sieb[1] = 0 setzen, weil 0 und 1 keine Primzahlen sind.
 // - Für alle Indizes 2 bis 1000: sieb[index] = 1 setzen.
-//
+//   for(int i=2 ;i<= 1000; ++i) { 
+     sieb ( i)=1}
+     for(int p=2; p*p<=1000 ; p++){ 
+     if (sieb[p]==1){
+     for (int k= p*p;K<=1000; k+=p){
+     sieb[k]=0;
+     }
+     }
+     }
+     for (int i = 2 ;i<=1000 ;i++){
+     if (sieb[i]==1){
+     primzahlen[anzahl]=(short)i;
+     anzahl ++;
+     }
+     }
+     }
 // 3. Teilfunktion SIEB: Vielfache streichen
 // - Mit p = 2 beginnen.
 // - Solange p * p <= 1000 gilt:
-//   - Falls sieb[p] = 1 (p ist noch nicht gestrichen):
-//     - Bei vielfaches = p * p anfangen.
-//     - Solange vielfaches <= 1000 gilt:
-//       - sieb[vielfaches] = 0 setzen (nicht prim).
-//       - vielfaches um p erhöhen.
-//   - p um 1 erhöhen und erneut prüfen.
+// - Falls sieb[p] = 1 (p ist noch nicht gestrichen):
+// - Bei vielfaches = p * p anfangen.
+// - Solange vielfaches <= 1000 gilt:
+// - sieb[vielfaches] = 0 setzen (nicht prim).
+// - vielfaches um p erhöhen.
+// - p um 1 erhöhen und erneut prüfen.
 // - Begründung: Kleinere Vielfache als p*p wurden bereits durch kleinere
 //   Primfaktoren gestrichen. Nach p = 31 muss nicht weiter gesiebt werden,
 //   denn 32*32 > 1000.
@@ -32,8 +47,8 @@
 // - anzahlPrimzahlen = 0 setzen.
 // - Alle Zahlen index = 2 bis 1000 der Reihe nach durchgehen.
 // - Wenn sieb[index] = 1 ist:
-//   - Die Zahl index in primzahlen[anzahlPrimzahlen] speichern.
-//   - anzahlPrimzahlen um 1 erhöhen.
+// - Die Zahl index in primzahlen[anzahlPrimzahlen] speichern.
+// - anzahlPrimzahlen um 1 erhöhen.
 // - Danach enthält das zweite Feld alle Primzahlen in aufsteigender Reihenfolge.
 //
 // 5. Ergebnis / Kontrolle

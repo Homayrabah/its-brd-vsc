@@ -28,27 +28,23 @@ FELD primzahlen[0..167] vom Typ 32-Bit-Ganzzahl
 sieb[0] = 0
 sieb[1] = 0
 FÜR i VON 2 BIS MAX:
-    sieb[i] = 1
+sieb[i] = 1
+
+// Initialisierung
+sieb[0] = 0
+sieb[1] = 0
+FÜR i VON 2 BIS MAX:
+sieb[i] = 1
 
 // Teilfunktion 1: Sieb
 p = 2
 SOLANGE p * p <= MAX:
-    WENN sieb[p] == 1:
-        vielfaches = p * p
-        SOLANGE vielfaches <= MAX:
-            sieb[vielfaches] = 0
-            vielfaches = vielfaches + p
-    p = p + 1
-
-// Teilfunktion 2: Abspeichern
-anzahlPrimzahlen = 0
-FÜR i VON 2 BIS MAX:
-    WENN sieb[i] == 1:
-        primzahlen[anzahlPrimzahlen] = i
-        anzahlPrimzahlen = anzahlPrimzahlen + 1
-
-// Ergebnis: anzahlPrimzahlen == 168
-```
+WENN sieb[p] == 1:
+vielfaches = p * p
+SOLANGE vielfaches <= MAX:
+sieb[vielfaches] = 0
+vielfaches = vielfaches + p
+p = p + 1```
 
 **Wesentliche Kontrollstrukturen:** `FÜR`-Schleifen und `SOLANGE`-Schleifen für wiederholte Arbeit sowie `WENN`-Bedingungen, um bereits gestrichene Zahlen zu überspringen und nur Primzahlen zu speichern. In Assembler werden diese später unter anderem durch Vergleiche und Sprünge umgesetzt.
 
